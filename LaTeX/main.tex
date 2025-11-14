@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{caption}     % untuk mengatur tampilan caption
+\usepackage{subcaption}  % opsional, kalau ingin subfigure (a)(b)
+\usepackage{float}       % agar [H] berfungsi (menahan posisi gambar)
+\usepackage{geometry}    % (opsional) untuk atur margin halaman
+\usepackage{wrapfig}     % (opsional) kalau mau gambar melingkari teks
+\usepackage{graphicx}
+
+
+% --- Gaya halaman default untuk isi ---
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Gaya halaman tanpa nomor (untuk cover/daftar isi) ---
+\fancypagestyle{plain}{%
+  \fancyhf{} % hapus header & footer
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+
+
+
+\geometry{top=3cm,bottom=3cm,left=3cm,right=3cm}
+
+% --- Daftar Isi (judul Indonesia) ---
+\renewcommand{\contentsname}{DAFTAR ISI}
+
+% Macro agar section* tetap masuk ToC
+\newcommand{\soalsec}[1]{%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}%
+}
+
+
+\pagestyle{fancy}
+\fancyhf{} % kosongkan semua header dan footer
+\rfoot{\thepage} % tampilkan nomor halaman di kanan bawah
+\renewcommand{\headrulewidth}{0pt} % hilangkan garis header
+\renewcommand{\footrulewidth}{0pt} % hilangkan garis footer
+
+
+\usepackage{tocloft}                 % kendali tampilan TOC
+\renewcommand{\cftdotsep}{2}         % jarak antar titik (lebih kecil = lebih rapat)
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}  % paksa pakai titik-titik
+
+% (opsional) rapikan jarak antar entri section di TOC
+\setlength{\cftbeforesecskip}{0pt}
+
+% Macro agar subsection* ikut masuk daftar isi
+\newcommand{\soalsub}[1]{%
+  \subsection*{#1}%
+  \addcontentsline{toc}{subsection}{#1}%
+}
+
+\begin{document}
+\pagenumbering{roman}  % gunakan angka romawi kecil
+\begin{titlepage}
+    \centering
+    \Large
+    \textbf{TUGAS   [KE-BERAPA] KELOMPOK}\\[0.5cm]
+    \textbf{[BAB-NYA]}\\[0.9CM]
+
+    \includegraphics[width=6.5cm]{Gambar/Logo ITS.png}\\[1cm]
+
+    \textbf{Disusun Oleh Kelompok 6 :}\\[0.3cm]
+    \begin{tabular}{rlr}
+    \begin{tabular}{rlr}
+    1. & M Fakriyan Pasha        & 5002231021\\
+    2. & Andini Widya Hapsari    & 5002231058\\
+    3. & Addien Zakia Hidayat    & 5002231063\\
+    4. & Sufara Anggraini C. P.  & 5002231135\\
+    5. & William Alvin Lidjaja   & 5002231139\\
+    \end{tabular}
+
+
+    \end{tabular}\\[1cm]
+
+    \textbf{Dosen Pengampu:}\\[0.3cm]
+    Raden Aurelius Andhika Viadinugroho, S.Si., M.Sc.\\
+    19990309 202406 1001\\[1cm]
+
+    \textbf{DEPARTEMEN MATEMATIKA}\\
+    \textbf{FAKULTAS SAINS DAN ANALITIKA DATA}\\
+    \textbf{INSTITUT TEKNOLOGI SEPULUH NOPEMBER}\\
+    \textbf{SURABAYA}\\[0.3cm]
+    \textbf{2025}
+\end{titlepage}
+
+%==================== DAFTAR ISI ====================
+\clearpage
+\thispagestyle{plain}  % hilangkan nomor di bawah
+\tableofcontents
+\clearpage
+
+
+
+ %===================================================================
+\clearpage
+\pagenumbering{arabic}  % ubah ke 1, 2, 3, ...
+\begin{center}
+    \Large
+    \section*{TUGAS TEORI KELOMPOK}
+\end{center}
+\addcontentsline{toc}{section}{TUGAS TEORI KELOMPOK}
+
+
+
+\begin{flushright}
+\texttt{No. 1 - William Alvin Lidjaja - 5002231139 - Nomor 13 halaman 270}
+\end{flushright}
+\vspace{0.1cm} % beri jarak ke bawah jika ingin menulis isi setelahnya
+
+\noindent
+\begin{center}
+    \large
+    \soalsec{Soal No 13}
+\end{center}
+
+
+
+
+
+
+
+
+%==================================================================
+\pagebreak
+\begin{flushright}
+\text{No. 2 - Sufara Anggraini C. P. - 5002231135 - Nomor 14 halaman 271}
+\end{flushright}
+\vspace{0.1cm} % beri jarak ke bawah jika ingin menulis isi setelahnya
+
+\noindent
+\begin{center}
+    \large
+    \soalsec{Soal No 14}
+\end{center}
+
+
+
+%==================================================================
+\pagebreak
+\begin{flushright}
+\texttt{No. 3 - Addien Zakia Hidayat - 5002231063 - Nomor 15 halaman 271}
+\end{flushright}
+\vspace{0.1cm} % beri jarak ke bawah jika ingin menulis isi setelahnya
+
+\noindent
+\begin{center}
+    \large
+    \soalsec{Soal No 15}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%==================================================================
+\pagebreak
+\begin{flushright}
+\texttt{No. 4 - Andini Widya Hapsari - 5002231058 - Nomor 23 halaman 272}
+\end{flushright}
+\vspace{0.1cm} % beri jarak ke bawah jika ingin menulis isi setelahnya
+
+\noindent
+\begin{center}
+    \large
+    \soalsec{Soal No 23}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+%==================================================================
+\pagebreak
+\begin{flushright}
+\texttt{No. 5 - Muhammad Fakriyan P - 5002231021 - Nomor 27 halaman 273}
+\end{flushright}
+\vspace{0.1cm} % beri jarak ke bawah jika ingin menulis isi setelahnya
+
+\noindent
+\begin{center}
+    \large
+    \soalsec{Soal No 27}
+\end{center}
+
+
+
+
+
+
+
+
+%==================================================================
+\pagebreak
+\clearpage
+\begin{center}
+    \Large
+    \section*{TUGAS PRAKTIKUM KELOMPOK}
+\end{center}
+\addcontentsline{toc}{section}{TUGAS PRAKTIKUM KELOMPOK}
+
+%==================================================================
+\soalsec{[BAB]} %PAKE INI UNTUK BAB
+
+\soalsub{[INI ADALAH SUBAB]} %PAKE INI UNTUK SUBAB
+
+
+%==================================================================
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Gambar/dataexcelklmpk.png}
+%     \caption{Data yang didapat pada Excel}
+%     \label{fig:data_excel_kelompok}
+%     \vspace{10pt}
+%     \includegraphics[width=0.9\textwidth]{Gambar/dataexcelklmpk.png}
+%     \caption{Rumus excel yang dipakai untuk pengolahan data}
+%     \label{fig:rumus_excel_kelompok}
+% \end{figure}
+
+%PAKE SYNTAX INI UNTUK COPAS GAMBAR -> TINGGAL GANTI NAMA GAMBAR AJA
+
+
+
+
+\end{document}
